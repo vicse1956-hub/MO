@@ -21,7 +21,7 @@ export default async function handler(req, res) {
   try {
     // Use HuggingFace Inference API - works fine from server side
     const MODEL = 'Lightricks/LTX-Video';
-    const hfRes = await fetch(`https://router.huggingface.co/hf-inference/models/${MODEL}`, {
+    const hfRes = await fetch(`https://api-inference.huggingface.co/models/${MODEL}`, {
       method: 'POST',
       headers,
       body: JSON.stringify({
